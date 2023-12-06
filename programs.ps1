@@ -6,7 +6,6 @@ winget install -e --id Google.Chrome
 winget install -e --id Mozilla.Firefox
 winget install -e --id 7zip.7zip
 winget install -e --id AnyDeskSoftwareGmbH.AnyDesk
-winget install -e --id TeamViewer.TeamViewer --force
 winget install -e --id VideoLAN.VLC
 
 Write-Host "Programs Installed"
