@@ -1,7 +1,7 @@
 # Define an array of script URLs
 $scriptUrls = @(
     "https://raw.githubusercontent.com/flips991/winauto/main/pwandkeyset.ps1"
-    "https://raw.githubusercontent.com/asheroto/winget-install/master/winget-install.ps1",
+    "https://raw.githubusercontent.com/ChrisTitusTech/winutil/main/winget.ps1",
     "https://raw.githubusercontent.com/flips991/winauto/main/programs.ps1"
 )
 
