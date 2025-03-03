@@ -49,3 +49,18 @@ Set-ItemProperty -Path $regPath -Name "Locale" -Value "0000081A"
 Set-ItemProperty -Path $regPath -Name "LocaleName" -Value "sr-Latn-RS"
 Set-ItemProperty -Path $regPath -Name "sCountry" -Value "Serbia"
 Set-ItemProperty -Path $regPath -Name "sLanguage" -Value "SRB"
+
+# Set time zone
+Set-TimeZone -Name "Central Europe Standard Time"
+
+# Set registry key to enable receiving updates for other Microsoft products
+$regPath = "HKLM:\SOFTWARE\Microsoft\WindowsUpdate\UX\Settings"
+$regName = "AllowMUUpdateService"
+$regValue = 1
+# Create or update the registry key
+Set-ItemProperty -Path $regPath -Name $regName -Value $regValue
+# Restart the Windows Update service to apply changes
+Restart-Service -Name wuauserv
+
+# Copy the current user's international settings to the Welcome screen and system accounts, and new user accounts
+Copy-UserInternationalSettingsToSystem -WelcomeScreen $True -NewUser $True
