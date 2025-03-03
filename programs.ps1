@@ -14,3 +14,5 @@ Write-Host "Programs Installed"
 Write-Host "Enabling .net 3.5"
 
 DISM /Online /Enable-Feature /FeatureName:NetFx3 /ALL
+
+# DONE
