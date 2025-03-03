@@ -1,5 +1,5 @@
-add-AppxPackage -Path "C:\Install\winget\Microsoft.UI.Xaml.2.8.x64.appx"
-add-AppxPackage -Path "C:\Install\winget\Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle"
+#add-AppxPackage -Path "C:\Install\winget\Microsoft.UI.Xaml.2.8.x64.appx"
+#add-AppxPackage -Path "C:\Install\winget\Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle"
 
 # Turn off sleep "standby timeout" on battery and on plugged in
 powercfg /change standby-timeout-ac 0
