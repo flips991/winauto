@@ -53,6 +53,11 @@ Set-ItemProperty -Path $regPath -Name "sLanguage" -Value "SRB"
 # Set time zone
 Set-TimeZone -Name "Central Europe Standard Time"
 
+# Set classic context menu
+reg add "HKEY_CURRENT_USER\SOFTWARE\CLASSES\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32" /ve /f
+taskkill /f /im explorer.exe
+start explorer.exe
+
 # Set registry key to enable receiving updates for other Microsoft products
 $regPath = "HKLM:\SOFTWARE\Microsoft\WindowsUpdate\UX\Settings"
 $regName = "AllowMUUpdateService"
